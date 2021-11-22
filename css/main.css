@@ -324,14 +324,16 @@ a {
     display: block;
     background: none;
     border: none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    color: #98aafa;
     transition: all 0.2s ease-in-out;
     transform-origin: center;
     cursor: pointer;
 }
+.bd-btn-close img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
 
 .bd-btn-contact:hover, .btn-primary:hover {
     background-color: #4467ff;
