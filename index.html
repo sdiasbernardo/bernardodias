@@ -11,17 +11,17 @@
 <body>
 
     <div class="bd-overlay">
-        <div class="bd-modal">
+        
+        <div class="bd-modal" id="bd-modal-sample">
 
             <div class="bd-modal-header">
                 <h1>Modal Title</h1>
-            </div>
-    
-            <button class="bd-btn-close">
-                <img src="images/icon-close-blue.svg" alt="Close Modal icon" />
+            </div>  
+            <button class="bd-btn-close bd-toggle-modal">
+                <img src="images/icon-close-primary.svg" alt="Close Modal" />
             </button>
-    
             <p>Modal text example.</p>
+
         </div>
     </div>
 
@@ -75,7 +75,7 @@
                     <h1>Hello!</h1>
                     <p class="bd-pad-down-30">I'm Bernardo, an UX & Game Designer focused to design beautiful and intelligent projects capable to solve problems and deliver results in a holistic process of research, test and development.</p>
                     <h4 class="bd-pad-down-60">I love creating pixel perfect designs from the first sketches to the HTML, CSS, JS and SVG micro-interactions.</h4>
-                    <button class="bd-btn btn-primary">Meu botão</button>
+                    <button class="bd-btn btn-primary bd-toggle-modal">Meu botão</button>
                 </div>
             </div>
             <div class="bd-scroll-down">
@@ -83,8 +83,18 @@
             </div>
         </section>
 
+        <section class="bd-full-height" id="bd-hero">
+            <div class="row middle-xs">
+                <div class="col-xs-offset-2 col-sm-12 col-md-4">
+                    dfdfd
+                </div>
+            </div>
+        </section>
+
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js" integrity="sha512-Q4MHJkk3u8P63v1aX0I7jvo5AoMFi53HbxUBhURp8x7xrqD+nsHZrbBEQVObpqE+MAAVB/Ye9ZlKkM44a1q9WA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js" integrity="sha512-g6IhMPPqSSUgE+lYgBpdsXICK0fNhDlDDEuIbphNIKfPTYFD/1VcnxA+7pS9mibvzIb5SB0nNvii5M+yMwkcJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
 
 </body>

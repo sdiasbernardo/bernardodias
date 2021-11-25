@@ -1,8 +1,8 @@
 // Preloader 
 window.addEventListener('load', function(){
-    var pagePreloader = document.querySelector('.bd-preloader');
+    const pagePreloader = document.querySelector('.bd-preloader');
 
-    pagePreloader.classList.add('bd-preloader-done');
+    pagePreloader.classList.add('bd-fade-out');
     
     
     setTimeout(function () {
@@ -11,9 +11,9 @@ window.addEventListener('load', function(){
 });
 
 // Button Contact Clicking
-var btnContact = document.querySelector('.bd-btn-contact');
-var btnContactImage = document.querySelector('.bd-btn-contact img');
-var contactBalloon = document.querySelector('.bd-balloon-contact');
+const btnContact = document.querySelector('.bd-btn-contact');
+const btnContactImage = document.querySelector('.bd-btn-contact img');
+const contactBalloon = document.querySelector('.bd-balloon-contact');
 
 btnContact.addEventListener('click', function() {
 
@@ -30,3 +30,27 @@ btnContact.addEventListener('click', function() {
 
 });
 
+// Modal
+const toggleModal = document.querySelectorAll('.bd-toggle-modal');
+
+for (var i = 0; i < toggleModal.length; i++) {
+    toggleModal[i].addEventListener('click', function () {
+        const overlay = document.querySelector('.bd-overlay');
+        const modalSample = document.querySelector('#bd-modal-sample');
+
+        overlay.classList.toggle('bd-overlay-shown');
+        modalSample.classList.toggle('bd-modal-shown');
+    })
+};
+
+
+// Waypoints scrolling animation
+var myScrollDown = document.querySelector('.bd-scroll-down');
+var waypoint = new Waypoint(
+    {
+    element: document.querySelector('.bd-scroll-down'),
+    handler: function() {
+        myScrollDown.classList.toggle('bd-fade-out');
+    },
+    offset: '80%'
+  });
