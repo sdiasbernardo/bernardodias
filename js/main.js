@@ -21,11 +21,9 @@ btnContact.addEventListener('click', function() {
 
     if (contactBalloon.classList.contains('balloon-opened')) {
         btnContactImage.src = "images/icon-close.svg";
-        console.log('foi');
     }
     else {
         btnContactImage.src = "images/icon-email.svg";
-        console.log('nao foi');
     }
 
 });
@@ -33,8 +31,8 @@ btnContact.addEventListener('click', function() {
 // Modal
 const toggleModal = document.querySelectorAll('.bd-toggle-modal');
 
-for (var i = 0; i < toggleModal.length; i++) {
-    toggleModal[i].addEventListener('click', function () {
+for (let n = 0; n < toggleModal.length; n++) {
+    toggleModal[n].addEventListener('click', function () {
         const overlay = document.querySelector('.bd-overlay');
         const modalSample = document.querySelector('#bd-modal-sample');
 
