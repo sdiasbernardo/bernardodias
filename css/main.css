@@ -194,13 +194,13 @@ a {
     }
     .bd-portfolio-navigator a {
         width: 20px;
-        height: 2px;
+        height: 4px;
+        border-radius: 100px;
         background-color: #4b4b4b;
         display: block;
         margin-bottom: 80px;
     }
     .bd-portfolio-navigator a.bd-item-active {
-        width: 90px;
         background-color: #98aafa;
     }
 
@@ -230,10 +230,12 @@ a {
 
     .bd-slider-container {
         background-color: gray;
+        display: block;
+        overflow: hidden;
     }
 
     .bd-slider-list {
-        width: 100%;
+        width: auto;
         height: 700px;
         display: block;
         background-color: deeppink;
@@ -241,8 +243,8 @@ a {
     }
 
     .bd-slider-item {
-        display: inline-block;
-        width: 500px;
+        display: block;
+        float: left;
         height: 500px;
     }
 
@@ -459,6 +461,7 @@ a {
     transition: all 0.2s ease-in-out;
     transform-origin: center;
     cursor: pointer;
+    opacity: 1;
 }
 .bd-btn-prev img, .bd-btn-next img {
     width: 15px;
