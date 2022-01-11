@@ -43,8 +43,8 @@ for (let n = 0; n < toggleModal.length; n++) {
 
 
 // Waypoints scrolling animation
-var myScrollDown = document.querySelector('.bd-scroll-down');
-var waypoint = new Waypoint(
+let myScrollDown = document.querySelector('.bd-scroll-down');
+let waypoint = new Waypoint(
     {
     element: document.querySelector('.bd-scroll-down'),
     handler: function() {

@@ -229,24 +229,48 @@ a {
     /************************ Portfolio Home Main Content ************************/
 
     .bd-slider-container {
-        background-color: gray;
         display: block;
         overflow: hidden;
     }
 
     .bd-slider-list {
         width: auto;
-        height: 700px;
         display: block;
-        background-color: deeppink;
         list-style: none;
     }
 
     .bd-slider-item {
         display: block;
         float: left;
-        height: 500px;
     }
+
+    .bd-portfolio-slider-thumb {
+        position: relative;
+    }
+    
+    .bd-portfolio-slider-thumb img, .bd-portfolio-slider-thumb video {
+        width: 100%;
+        max-width: 600px;
+        -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2); 
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+        transition: all 0.2s ease-in-out;
+        border-radius: 6px;
+        z-index: 1;
+    }
+    .bd-portfolio-slider-thumb-box {
+        content: '';
+        width: 90%;
+        height: 120%;
+        right: 5%;
+        top: -10%;
+        background: rgba(0 0 0 / 0.2);
+        position: absolute;
+        z-index: 0;
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+        transform-origin: left;
+    }
+
 
     /************************ Preloader ************************/
 
@@ -382,6 +406,13 @@ a {
 
 .bd-pad-down-60 {
     padding-bottom: 60px;
+}
+
+.bd-max-600 {
+    max-width: 600px;
+}
+.middle-xs > div {
+    position: relative;
 }
 
 

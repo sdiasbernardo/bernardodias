@@ -5,18 +5,20 @@
 const sliderContainer = document.querySelector('.bd-slider-container');
 const sliderList = document.querySelector('.bd-slider-list');
 const sliderItem = document.querySelectorAll('.bd-slider-item');
-var sliderListWidth = null;
+let sliderListWidth = null;
 
 const sliderTotalItemsCounter = sliderItem.length;
-var sliderCurrentItem = document.querySelectorAll('.bd-current-slide');
+let sliderCurrentItem = document.querySelectorAll('.bd-current-slide');
 const sliderLastItem = document.querySelector('.bd-last-slide');
+let sliderimagesThumb = document.querySelectorAll('.bd-portfolio-slider-thumb');
+let sliderimagesThumbBox = document.querySelectorAll('.bd-portfolio-slider-thumb-box');
 
-var containerWidth = sliderContainer.parentElement.offsetWidth;
+let containerWidth = sliderContainer.parentElement.offsetWidth;
 
 const prevItem = document.querySelector('.bd-btn-prev');
 const nextItem = document.querySelector('.bd-btn-next');
-var sliderPos = 0;
-var sliderPosCounter = 1;
+let sliderPos = 0;
+let sliderPosCounter = 1;
 
 const navigatorLines = document.querySelectorAll('.bd-portfolio-navigator a');
 
@@ -26,7 +28,7 @@ sliderContainer.style.width = containerWidth + 'px';
 
 for (let n = 0; n < sliderItem.length; n++) {
     sliderItem[n].style.width = containerWidth + 'px';
-    var sliderItemWidth = sliderItem[n].offsetWidth;
+    let sliderItemWidth = sliderItem[n].offsetWidth;
 
     sliderListWidth += sliderItemWidth;
 }
@@ -37,10 +39,10 @@ sliderList.style.width = sliderListWidth + 'px';
 // ============================== HANDLERS ================================
 
 // Move slider Function
-var moveSlider = function (sliderDir) {
+let moveSlider = function (sliderDir) {
 
     if (sliderDir === false) {
-        var lastItem = sliderListWidth - containerWidth;
+        let lastItem = sliderListWidth - containerWidth;
 
         if ((-1*(sliderPos) === lastItem)) {
             return;
@@ -48,10 +50,27 @@ var moveSlider = function (sliderDir) {
 
         sliderPos -= containerWidth
 
+        // Moving effect
         anime({
             targets: sliderList,
+            easing: 'spring(1, 100, 20, 0)',
             translateX: sliderPos
           });
+
+        // Thumb effect
+        anime({
+            targets: sliderimagesThumb[sliderPosCounter],
+            easing: 'spring(1, 80, 10, 0)',
+            translateY: [300, 0],
+            duration: '300'
+        });
+        anime({
+            targets: sliderimagesThumbBox[sliderPosCounter],
+            easing: 'easeOutElastic(1, .6)',
+            width: ['10%', '90%'],
+            duration: '200',
+            delay: 100
+        });
 
         sliderPosCounter++;
 
@@ -65,12 +84,29 @@ var moveSlider = function (sliderDir) {
 
         sliderPos += containerWidth
 
+        // Moving effect
         anime({
             targets: sliderList,
+            easing: 'spring(1, 100, 20, 0)',
             translateX: sliderPos
           });
 
-          sliderPosCounter--;
+        sliderPosCounter--;
+
+        // Thumb effect
+        anime({
+            targets: sliderimagesThumb[sliderPosCounter-1],
+            easing: 'spring(1, 80, 10, 0)',
+            translateY: [300, 0],
+            duration: '300'
+        });
+        anime({
+            targets: sliderimagesThumbBox[sliderPosCounter-1],
+            easing: 'easeOutElastic(1, .6)',
+            width: ['10%', '90%'],
+            duration: '200',
+            delay: 100
+        });
 
 
     }
@@ -78,7 +114,7 @@ var moveSlider = function (sliderDir) {
 }
 
 // Slider Counter Formatter
-var counterFormatter = function(n) {
+let counterFormatter = function(n) {
 
     if(n < 10) {
         return '0' + n;
@@ -90,7 +126,7 @@ var counterFormatter = function(n) {
 }
 
 // Slider Current Counter
-var sliderCurrentItemCounter = function() {
+let sliderCurrentItemCounter = function() {
 
     for (let n = 0; n < sliderCurrentItem.length; n++) {
 
@@ -99,7 +135,7 @@ var sliderCurrentItemCounter = function() {
 }
 
 // Navigator lines modifier
-var navigatorLinesCounter = function() {
+let navigatorLinesCounter = function() {
 
     for (let n = 0; n < navigatorLines.length; n++) {
 
@@ -122,6 +158,7 @@ var navigatorLinesCounter = function() {
     }
     
 }
+
 
 
 // ============================== ACTIONS ================================
