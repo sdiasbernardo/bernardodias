@@ -43,12 +43,43 @@ for (let n = 0; n < toggleModal.length; n++) {
 
 
 // Waypoints scrolling animation
-let myScrollDown = document.querySelector('.bd-scroll-down');
+/*let myScrollDown = document.querySelector('.bd-scroll-down');
+let headerSticky = document.querySelector('.bd-header');
 let waypoint = new Waypoint(
     {
-    element: document.querySelector('.bd-scroll-down'),
+    element: myScrollDown,
     handler: function() {
         myScrollDown.classList.toggle('bd-fade-out');
     },
     offset: '80%'
-  });
+});
+
+let waypoint = new Waypoint(
+    {
+    element: headerSticky,
+    handler: function() {
+        headerSticky.classList.toggle('sticky');
+    },
+    offset: '80%'
+});*/
+
+
+let myScrollDown = {
+    waypoint: new Waypoint( {
+        element: document.querySelector('.bd-scroll-down'),
+        handler: function() {
+        this.element.classList.toggle('bd-fade-out');
+    },
+    offset: '80%'
+})};
+
+let headerScrollDown = {
+    waypoint: new Waypoint( {
+        element: document.querySelector('.bd-header'),
+        handler: function() {
+        this.element.classList.toggle('sticky');
+    },
+    offset: -25
+})};
+
+
