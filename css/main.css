@@ -87,6 +87,7 @@ a {
         display: block;
         background-color: transparent;
         z-index: 200;
+        transition: all 0.3s ease-in-out;
     }
 
     .bd-logo {
@@ -94,18 +95,34 @@ a {
         height: 100px;
         float: left;
         margin-left: 60px;
+        padding-bottom: 10px;
         background-color: #98aafa;
         border-radius: 0 0 40px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
     }
 
     .bd-logo img {
         width: 40px;
         display: block;
-        margin: 30px auto 0 auto;
     }
 
     .bd-nav {
         display: none;
+    }
+
+    .sticky {
+        height: 60px;
+        background-color: rgb(0 0 0 / 0.9);
+        transition: all 0.3s ease-in-out;
+        -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.4); 
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.4);
+    }
+    .bd-header.sticky .bd-logo {
+        height: 80px;
+        transition: all 0.3s ease-in-out;
     }
 
     /************************ Hero ************************/
@@ -133,7 +150,7 @@ a {
     }
 
     #bd-hero {
-        height: calc(100vh - 40px);
+        height: calc(100vh - 20px);
         background-image: url(../images/img-bernardo.png);
         background-repeat: no-repeat;
         background-position: 80% bottom;
@@ -357,10 +374,11 @@ a {
 
 @media screen and (min-width: 992px) {
     .bd-nav {
-        display: table;
+        display: flex;
         float: left;
-        height: 100px;
+        height: 100%;
         margin-left: 30px;
+        align-items: center;
     }
 
     .bd-nav a {
@@ -372,7 +390,6 @@ a {
         color: #ffffff;
         display: inline-block;
         padding: 0 20px;
-        margin-top: 40px;
         transition: all 0.1s ease-out;
     }
     .bd-nav a:first-child {
