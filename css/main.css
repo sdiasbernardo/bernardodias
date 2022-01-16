@@ -139,6 +139,11 @@ a {
         z-index: 0;
     }
 
+    .bd-section {
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
     .bd-full-height {
         display: flex;
         margin: 0 auto;
@@ -147,6 +152,10 @@ a {
 
     .bd-content-max {
         max-width: 1200px;
+    }
+
+    .bd-section-inner {
+        padding: 150px 0;
     }
 
     #bd-hero {
@@ -182,12 +191,6 @@ a {
     }
 
     /************************ Portfolio Home Sidebar ************************/
-
-    .bd-section {
-        margin: 0 auto;
-        padding: 0 40px;
-        height: 100vh;
-    }
 
     .bd-portfolio-sidebar {
         width: 100%;
@@ -326,6 +329,7 @@ a {
         transition: all 0.2s ease-in-out;
         transform: translateY(300px);
         transform-origin: bottom right;
+        z-index: 2;
     }
     .bd-balloon-contact:after {
         content: '';
@@ -428,8 +432,17 @@ a {
 .bd-max-600 {
     max-width: 600px;
 }
+
 .middle-xs > div {
     position: relative;
+}
+
+.bd-hidden {
+    display: none;
+}
+
+.bd-bg-gray {
+    background-color: #161616; 
 }
 
 

@@ -10,6 +10,7 @@ window.addEventListener('load', function(){
     }, 500);
 });
 
+
 // Button Contact Clicking
 const btnContact = document.querySelector('.bd-btn-contact');
 const btnContactImage = document.querySelector('.bd-btn-contact img');
@@ -28,6 +29,7 @@ btnContact.addEventListener('click', function() {
 
 });
 
+
 // Modal
 const toggleModal = document.querySelectorAll('.bd-toggle-modal');
 
@@ -42,36 +44,7 @@ for (let n = 0; n < toggleModal.length; n++) {
 };
 
 
-// Waypoints scrolling animation
-/*let myScrollDown = document.querySelector('.bd-scroll-down');
-let headerSticky = document.querySelector('.bd-header');
-let waypoint = new Waypoint(
-    {
-    element: myScrollDown,
-    handler: function() {
-        myScrollDown.classList.toggle('bd-fade-out');
-    },
-    offset: '80%'
-});
-
-let waypoint = new Waypoint(
-    {
-    element: headerSticky,
-    handler: function() {
-        headerSticky.classList.toggle('sticky');
-    },
-    offset: '80%'
-});*/
-
-
-let myScrollDown = {
-    waypoint: new Waypoint( {
-        element: document.querySelector('.bd-scroll-down'),
-        handler: function() {
-        this.element.classList.toggle('bd-fade-out');
-    },
-    offset: '80%'
-})};
+// Waypoints scroll
 
 let headerScrollDown = {
     waypoint: new Waypoint( {
@@ -82,4 +55,11 @@ let headerScrollDown = {
     offset: -25
 })};
 
-
+let myScrollDown = {
+    waypoint: new Waypoint( {
+        element: document.querySelector('.bd-scroll-down'),
+        handler: function() {
+        this.element.classList.toggle('bd-fade-out');
+    },
+    offset: '80%'
+})};

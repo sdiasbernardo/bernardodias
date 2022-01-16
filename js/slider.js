@@ -61,7 +61,7 @@ let moveSlider = function (sliderDir) {
         anime({
             targets: sliderimagesThumb[sliderPosCounter],
             easing: 'spring(1, 80, 10, 0)',
-            translateY: [300, 0],
+            scale: [1.5, 1],
             duration: '300'
         });
         anime({
@@ -97,7 +97,7 @@ let moveSlider = function (sliderDir) {
         anime({
             targets: sliderimagesThumb[sliderPosCounter-1],
             easing: 'spring(1, 80, 10, 0)',
-            translateY: [300, 0],
+            scale: [1.5, 1],
             duration: '300'
         });
         anime({
