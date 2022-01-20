@@ -156,6 +156,7 @@ a {
 
     .bd-section-inner {
         padding: 150px 0;
+        position: relative;
     }
 
     #bd-hero {
@@ -292,6 +293,31 @@ a {
     }
 
 
+    /************************ Portfolio Single Page ************************/
+
+    .bd-portfolio-single-bg {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+    }
+    .bd-portfolio-single-bg video, .bd-portfolio-single-bg img {
+        width: 100%;
+    }
+    .bd-portfolio-single-overlay {
+        max-width: 600px;
+        background-color: rgb(0 0 0 / 0.9);
+        padding: 40px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 40%);
+        box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 40%);
+    }
+
+
     /************************ Preloader ************************/
 
     .bd-preloader {
@@ -424,11 +450,9 @@ a {
 .bd-pad-down-30 {
     padding-bottom: 30px;
 }
-
 .bd-pad-down-60 {
     padding-bottom: 60px;
 }
-
 .bd-max-600 {
     max-width: 600px;
 }
@@ -443,6 +467,9 @@ a {
 
 .bd-bg-gray {
     background-color: #161616; 
+}
+.bd-bg-back {
+    background-color: #000000; 
 }
 
 
@@ -471,6 +498,10 @@ a {
     height: 60px;
     display: block;
     background-color: #98aafa;
+    background-image: url(../images/icon-email.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
     position: fixed;
     bottom: 45px;
     right: 45px;
@@ -481,6 +512,10 @@ a {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     z-index: 200;
+}
+.btn-contact-active {
+    background-image: url(../images/icon-close.svg);
+    background-size: 40%;
 }
 .bd-btn-contact img {
     position: absolute;

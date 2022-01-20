@@ -13,19 +13,13 @@ window.addEventListener('load', function(){
 
 // Button Contact Clicking
 const btnContact = document.querySelector('.bd-btn-contact');
-const btnContactImage = document.querySelector('.bd-btn-contact img');
+const btnContactImage = document.querySelector('.bd-btn-contact');
 const contactBalloon = document.querySelector('.bd-balloon-contact');
 
 btnContact.addEventListener('click', function() {
 
     contactBalloon.classList.toggle('balloon-opened');
-
-    if (contactBalloon.classList.contains('balloon-opened')) {
-        btnContactImage.src = "images/icon-close.svg";
-    }
-    else {
-        btnContactImage.src = "images/icon-email.svg";
-    }
+    btnContactImage.classList.toggle('btn-contact-active');
 
 });
 
