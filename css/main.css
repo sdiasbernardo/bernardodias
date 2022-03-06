@@ -17,16 +17,33 @@ h1 {
     font-size: 60px;
 }
 
-h4 {
+h2 {
+    font-size: 40px;
+}
+
+h3 {
     font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
     color: #ffffff;
 }
 a {
     text-decoration: none;
+    color: #98aafa;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+a:hover {
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
 }
 
 @media screen and (min-width: 320px) {
@@ -155,7 +172,7 @@ a {
     }
 
     .bd-section-inner {
-        padding: 150px 0;
+        padding: 60px 0;
         position: relative;
     }
 
@@ -275,7 +292,7 @@ a {
         -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2); 
         box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
         transition: all 0.2s ease-in-out;
-        border-radius: 6px;
+        border-radius: 12px;
         z-index: 1;
     }
     .bd-portfolio-slider-thumb-box {
@@ -287,34 +304,84 @@ a {
         background: rgba(0 0 0 / 0.2);
         position: absolute;
         z-index: 0;
-        border-radius: 6px;
+        border-radius: 12px;
         transition: all 0.2s ease-in-out;
         transform-origin: left;
+    }
+    
+    .bd-portfolio-slider-info video {
+        width: 100%;
+        border-radius: 12px;
     }
 
 
     /************************ Portfolio Single Page ************************/
 
-    .bd-portfolio-single-bg {
+    .bd-portfolio-single-hero {
+        content: '';
+        background-color: #222222;
+        width: 100%;
+        height: 60%;
         position: absolute;
-        display: flex;
-        align-items: center;
-        top: 0;
         left: 0;
-        width: 100%;
-        height: 60vh;
-        overflow: hidden;
+        top: 0;
+        z-index: 0;
     }
-    .bd-portfolio-single-bg video, .bd-portfolio-single-bg img {
-        width: 100%;
+
+    .bd-portfolio-single-thumb img, .bd-portfolio-single-thumb video {
+        max-width: 100%;
+        border-radius: 30px 30px 0 0;
+        -webkit-box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 40%);
+        box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 40%);
     }
-    .bd-portfolio-single-overlay {
+
+    .bd-portfolio-single-card-thumb {
+        height: 100%;
+    }
+
+    .bd-portfolio-single-card-thumb img {
+        width: 100%;
+        height: 100%;
         max-width: 600px;
-        background-color: rgb(0 0 0 / 0.9);
+        border-radius: 30px;
+        transition: all 0.2s ease-in-out;
+        z-index: 1;
+        padding: 60px;
+        -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2); 
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
+    }
+    .bd-single-image img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .bd-highlight-card {
+        background-color: #000000;
+        border-radius: 30px;
         padding: 40px;
-        border-radius: 6px;
-        -webkit-box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 40%);
-        box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 40%);
+        overflow: hidden;
+        -webkit-box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 40%);
+        box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 40%);
+    }
+
+    .bd-highlight-bg {
+        content: '';
+        background-color: #000000;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .bd-card {
+        height: 100%;
+        border-radius: 30px;
+        padding: 40px 30px;
+        transition: all 0.2s ease-in-out;
+        -webkit-box-shadow: 0px 0px 5px 5px rgb(0 0 0 / 20%);
+        box-shadow: 0px 0px 5px 5px rgb(0 0 0 / 20%);
     }
 
 
@@ -391,6 +458,14 @@ a {
         height: auto;
         margin: 12px auto 0;
     }
+
+
+    /************************ Contact FAB ************************/
+
+    .bd-footer {
+        background-color: #000000;
+        padding: 60px 0 30px;
+    }
     
 }
 
@@ -420,15 +495,18 @@ a {
         color: #ffffff;
         display: inline-block;
         padding: 0 20px;
-        transition: all 0.1s ease-out;
+        transition: all 0.2s ease-out;
     }
     .bd-nav a:first-child {
         padding-left: 0;
     }
     .bd-nav a:hover {
-        color: #98aafa;
-        text-decoration: underline;
-        transform: translateY(-2px);
+        opacity: 0.6;
+    }
+
+    .bd-section-inner {
+        padding: 130px 0;
+        position: relative;
     }
 }
 
@@ -447,11 +525,40 @@ a {
 
 /* General Defaults */
 
+.bd-padding-0 {
+    padding: 0;
+}
+.bd-padding-0 img {
+    padding: 0;
+}
+
+.bd-pad-top-0 {
+    padding-top: 0;
+}
+.bd-pad-top-15 {
+    padding-top: 15px;
+}
+.bd-pad-top-30 {
+    padding-top: 30px;
+}
+.bd-pad-top-60 {
+    padding-top: 60px;
+}
+
+.bd-pad-down-10 {
+    padding-bottom: 10px;
+}
+.bd-pad-down-15 {
+    padding-bottom: 15px;
+}
 .bd-pad-down-30 {
     padding-bottom: 30px;
 }
 .bd-pad-down-60 {
     padding-bottom: 60px;
+}
+.bd-pad-down-90 {
+    padding-bottom: 90px;
 }
 .bd-max-600 {
     max-width: 600px;
@@ -465,12 +572,70 @@ a {
     display: none;
 }
 
+.bd-bg-primary {
+    background-color: #1c1c1c; 
+}
 .bd-bg-gray {
     background-color: #161616; 
 }
 .bd-bg-back {
     background-color: #000000; 
 }
+.bd-bg-white {
+    background-color: #ffffff; 
+}
+.bd-bg-prisma-blue {
+    background-color: #3fafef; 
+}
+.bd-bg-prisma-purple {
+    background-color: #60139a; 
+}
+.bd-bg-prisma-orange {
+    background-color: #e58823; 
+}
+.bd-bg-prisma-green {
+    background-color: #29c573; 
+}
+.bd-bg-prisma-pink {
+    background-color: #de2356; 
+}
+
+.bd-text-center {
+    text-align: center;
+}
+.bd-text-content-max {
+    margin: 0 auto;
+    max-width: 500px;
+}
+.bd-text-20 {
+    font-size: 20px;
+}
+.bd-text-12 {
+    font-size: 12px;
+}
+.bd-text-white {
+    color: #ffffff;
+}
+
+.bd-image-90 {
+    width: auto;
+    height: 90px;
+}
+.bd-image-150 {
+    width: auto;
+    max-width: 100%;
+    height: 150px;
+}
+.bd-image-200 {
+    width: auto;
+    max-width: 100%;
+    height: 200px;
+}
+.bd-image-center {
+    margin: 0 auto;
+    display: block;
+}
+
 
 
 /* General Animations */
@@ -488,7 +653,48 @@ a {
 @keyframes fade-out-anim {
     99%  {opacity: 0;}
     100%   {display: none;opacity: 0;}
-  }
+}
+
+
+.bd-circle-glow-purple {
+    opacity: 0.5;
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    background-color: #747DE8;
+    box-shadow: 0 0 120px 120px #747DE8;
+    animation: purple-glow-anim 30s linear infinite alternate;
+}
+@keyframes purple-glow-anim {
+    to {
+      opacity: 0.1;
+      box-shadow: 0 0 280px 280px #9E77F6;
+    }
+}
+
+.bd-circle-glow-blue {
+    opacity: 0.5;
+    position: absolute;
+    bottom: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    background-color: #A7C4FF;
+    box-shadow: 0 0 90px 90px #A7C4FF;
+    animation: blue-glow-anim 30s linear infinite alternate;
+}
+@keyframes blue-glow-anim {
+    to {
+      opacity: 0.1;
+      box-shadow: 0 0 200px 200px #A7C4FF;
+    }
+}
 
 
 /* Buttons */
@@ -589,6 +795,7 @@ a {
 }
 .btn-primary {
     padding: 0 45px;
+    max-width: 300px;
     height: 45px;
     line-height: 45px;
     border-radius: 5px;
@@ -602,4 +809,50 @@ a {
     border-radius: 5px;
     background-color: #000000;
     color: #98aafa;
+}
+.btn-center {
+    margin: 0 auto;
+}
+
+/* Links */
+
+.bd-link {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.bd-link p {
+    color: #98aafa;
+    font-weight: 500;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    order: 1;
+}
+.bd-link:hover p, .bd-footer-link:hover p {
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
+}
+.bd-link:hover .bd-link-icon {
+    opacity: 0.6;
+    transform: translateX(5px);
+    transition: all 0.2s ease-in-out;
+}
+
+.bd-link-icon {
+    display: flex;
+    width: auto;
+    height: 10px;
+    margin: 2px 8px 0;
+    order: 1;
+    transition: all 0.2s ease-in-out;
+}
+.bd-link-icon-left {
+    order: 0;
+}
+
+.bd-footer-link p {
+    color: #98aafa;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/main.css" />
     <link rel="stylesheet" type="text/css" href="../css/flexboxgrid.css" />
     <title>Bernardo Dias UX/UI & Game Designer</title>
@@ -32,14 +33,14 @@
     </header>
 
     <div class="bd-balloon-contact">
-        <h2>Contact</h2>
+        <h2 class="bd-pad-down-15" >Contact</h2>
         <p>sdiasbernardo@gmail.com</p>
-        <p>+55 21 99264-6884</p>
+        <a href="https://api.whatsapp.com/send?phone=5521992646884" target="_blank"><p>Whatsapp</p></a>
         <div class="bd-social-links">
-            <a href="#" class="bd-social-links-icons">
+            <a class="bd-social-links-icons" href="https://www.linkedin.com/in/sdiasbernardo/" target="_blank">
                 <img src="../images/icon-linkedin.svg" alt="Linkedin Profile" />
             </a>
-            <a href="#" class="bd-social-links-icons">
+            <a class="bd-social-links-icons" href="https://www.instagram.com/sdiasbernardo/" target="_blank">
                 <img src="../images/icon-instagram.svg" alt="Instagram Profile" />
             </a>
         </div>
@@ -48,31 +49,178 @@
     
     <button class="bd-btn-contact"></button>
 
-    <div class="bd-wrapper bd-border-top-0">
+    <div class="bd-wrapper">
 
         <div class="bd-scroll-down bd-hidden">
-            <img src="../images/icon-arrow.svg" alt="Scroll down" />
+            <img src="../images/icon-arrow-down.svg" alt="Scroll down" />
         </div>
 
         <div class="bd-section-inner">
-            <div class="bd-portfolio-single-bg">
-            <video preload="auto" autoplay="" playsinline="" loop="" muted="">
-                <source src="../videos/valiant-saga-cover.webm" alt="Valiant Saga" type="video/webm">
-            </video>
-            </div>
-
+            <div class="bd-portfolio-single-hero"></div>
             <section class="bd-section bd-content-max">
                 <div class="row middle-xs">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="bd-portfolio-slider-info bd-portfolio-single-overlay">
-                            <h2 class="bd-pad-down-30">Valiant Saga</h2>
-                            <p class="bd-pad-down-60">A game with a classic 2d feeling that mixes pixel art with stunning modern effects.</p>
-                            <button class="bd-btn btn-primary">See project</button>
+                        <h1 class="bd-pad-down-30 bd-text-center">Valiant Saga</h1>
+                        <div class="bd-text-content-max">
+                            <p class="bd-pad-down-60 bd-text-center">A game with a classic 2d feeling that mixes pixel art with stunning modern effects.</p>
+                        </div>
+                        <div class="bd-portfolio-single-thumb" data-aos="fade-up" data-aos-duration="1000">
+                            <video preload="auto" autoplay="" playsinline="" loop="" muted="">
+                                <source src="../videos/valiant-saga/valiant-saga-cover.webm" alt="Valiant Saga" type="video/webm">
+                            </video>
                         </div> 
                     </div>
                 </div>
             </section>
         </div>
+
+        <div class="bd-section-inner bd-pad-top-0">
+            <section class="bd-section bd-content-max">
+
+                <div class="row middle-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="bd-pad-down-30 bd-text-center">Brief</h2>
+                        <div class="bd-text-content-max">
+                            <p class="bd-pad-down-60 bd-text-center">Valiant Saga is a game project that I'm developing with a friend called Fernando. We are using the famous Unreal Engine to develop it.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row middle-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                        <div class="bd-portfolio-slider-info">
+                            <div class="bd-portfolio-single-card-thumb" data-aos="fade-right">
+                                <img class="bd-bg-gray" src="../images/valiant-saga/valiant-saga-logo.png" alt="Valiant Saga logo"/>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
+                        <div class="bd-portfolio-slider-info">
+                            <p class="bd-pad-down-30">Valiant Saga has built a solid audience and is being developed to run on PC, Mac, Linux, PS4/PS5, Xbox One/Xbox Series and Nintendo Switch.</p>
+                            <p class="bd-pad-down-30">The game was quickly approved on Greenlight - Steam publishing system where the users votes which games will be sold on the platform.</p>
+                            <p>The Greenlight campaign generated more than 8300 unique visitors, 680 comments and 484 additions to the wish list.</p>
+                        </div> 
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="bd-section-inner bd-bg-gray">
+            <section class="bd-section bd-content-max">
+
+                <div class="row middle-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="bd-pad-down-30 bd-text-center">Game features</h2>
+                        <div class="bd-text-content-max">
+                            <p class="bd-pad-down-60 bd-text-center">Immersive adventure inspired by retro platform games.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bd-pad-down-90">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="bd-portfolio-slider-info">
+                            <div class="bd-single-image" data-aos="zoom-out">
+                                <img src="../images/valiant-saga/visceral-combat.gif" alt="Visceral Combat"/>
+                            </div>
+                            <h3 class="bd-pad-top-15 bd-pad-down-15">Visceral combat</h3>
+                            <p>Unleash the power of the inherited axe from your master and defeat without mercy all enemies that dare to stay in your way.</p>
+                        </div> 
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="bd-portfolio-slider-info">
+                            <div class="bd-single-image" data-aos="zoom-out" data-aos-delay="200">
+                                <img src="../images/valiant-saga/epic-battles.gif" alt="Epic battles"/>
+                            </div>
+                            <h3 class="bd-pad-top-15 bd-pad-down-15">Epic battles</h3>
+                            <p>To stay alive you will need to overcome the most terrible creatures and they will be increasingly deadly and dangerous.</p>
+                        </div> 
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="bd-portfolio-slider-info">
+                            <div class="bd-single-image" data-aos="zoom-out" data-aos-delay="400">
+                                <img src="../images/valiant-saga/rpg-features.gif" alt="RPG features"/>
+                            </div>
+                            <h3 class="bd-pad-top-15 bd-pad-down-15">RPG features</h3>
+                            <p>You will be able to help people from villages in side quests, solve challenging puzzles and collect different types of items that will support you along your journey.</p>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="bd-portfolio-slider-info">
+                            <div class="bd-single-image" data-aos="zoom-out" data-aos-delay="200">
+                                <img src="../images/valiant-saga/destiny-of-braves.gif" alt="The destiny of the braves"/>
+                            </div>
+                            <h3 class="bd-pad-top-15 bd-pad-down-15">The destiny of the braves</h3>
+                            <p>You will need to pass over several traps through dungeons and abandoned temples. The fear will be your only company.</p>
+                        </div> 
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="bd-portfolio-slider-info">
+                            <div class="bd-single-image" data-aos="zoom-out" data-aos-delay="200">
+                                <img src="../images/valiant-saga/retro-style.gif" alt="Retro style"/>
+                            </div>
+                            <h3 class="bd-pad-top-15 bd-pad-down-15">Retro style</h3>
+                            <p>Valiant Saga follows the classic platform games but with pixelated art mixed with modern lighting and shading effects.</p>
+                        </div> 
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="bd-portfolio-slider-info">
+                            <div class="bd-single-image" data-aos="zoom-out" data-aos-delay="400">
+                                <img src="../images/valiant-saga/exploration.gif" alt="Freedom and exploration"/>
+                            </div>
+                            <h3 class="bd-pad-top-15 bd-pad-down-15">Freedom and exploration</h3>
+                            <p>The game has a level progression system accessed through a map with all kingdoms that you can go back to search for new secrets or hidden places.</p>
+                        </div> 
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="bd-section-inner">
+            <section class="bd-section bd-content-max">
+
+                <div class="row middle-xs">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="bd-highlight-card" data-aos="zoom-in">
+
+                            <div class="bd-highlight-bg">
+                                <!-- <div class="bd-circle-glow-purple rellax" data-rellax-speed="-0.5"></div> -->
+                                <!-- <div class="bd-circle-glow-blue rellax" data-rellax-speed="0"></div> -->
+                            </div>
+
+                            <h1 class="bd-pad-down-30">Project highlights</h1>
+
+                            <a class="bd-link bd-pad-down-30" href="https://steamcommunity.com/sharedfiles/filedetails/?id=916665462" target="_blank">
+                                <p class="bd-text-20">See Valiant Saga on Steam</p>
+                                <img class="bd-link-icon" src="../images/icon-double-arrow-right.svg" alt="Arrow Icon" />
+                            </a>
+
+                            <a class="bd-link bd-pad-down-30" href="http://pixhitt.com.br/" target="_blank">
+                                <p class="bd-text-20">See Valiant Saga on Web</p>
+                                <img class="bd-link-icon" src="../images/icon-double-arrow-right.svg" alt="Arrow Icon" />
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <footer class="bd-footer">
+            <p class="bd-text-center">Proudly developed by me 💙</p>
+            <a class="bd-footer-link bd-text-center" href="https://github.com/sdiasbernardo/bernardodias/" target="_blank"><p class="bd-text-center bd-text-12">Check this portfolio on Github</p></a>
+        </footer>
 
     </div>
 
@@ -80,6 +228,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js" integrity="sha512-Q4MHJkk3u8P63v1aX0I7jvo5AoMFi53HbxUBhURp8x7xrqD+nsHZrbBEQVObpqE+MAAVB/Ye9ZlKkM44a1q9WA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.min.js" integrity="sha512-g6IhMPPqSSUgE+lYgBpdsXICK0fNhDlDDEuIbphNIKfPTYFD/1VcnxA+7pS9mibvzIb5SB0nNvii5M+yMwkcJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>AOS.init();var rellax = new Rellax('.rellax');</script>
     <script src="../js/main.js"></script>
  
 
