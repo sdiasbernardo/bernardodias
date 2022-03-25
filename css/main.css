@@ -22,11 +22,11 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 p {
@@ -47,6 +47,10 @@ a:hover {
 }
 
 @media screen and (min-width: 320px) {
+
+    .col-xs-12 {
+        margin-bottom: 40px;
+    }
 
     /************************ Overlay & Modal ************************/
 
@@ -174,15 +178,16 @@ a:hover {
     .bd-section-inner {
         padding: 60px 0;
         position: relative;
+        overflow: hidden;
     }
-
     #bd-hero {
         height: calc(100vh - 20px);
-        background-image: url(../images/img-bernardo.png);
+        background-image: none;
         background-repeat: no-repeat;
-        background-position: 80% bottom;
+        background-position: 100% bottom;
         background-size: auto 90%;
         position: relative;
+        border-bottom: 20px solid #000000;
     }
 
     .bd-scroll-down {
@@ -215,9 +220,7 @@ a:hover {
     }
 
     .bd-portfolio-counter {
-        width: 100%;
-        display: block;
-        padding-bottom: 40px;
+        display: none;
     }
     .bd-portfolio-counter span {
         font-family: 'Open Sans', sans-serif;
@@ -227,30 +230,17 @@ a:hover {
     }
 
     .bd-portfolio-navigator {
-        width: 100%;
-        display: table;
-    }
-    .bd-portfolio-navigator a {
-        width: 20px;
-        height: 4px;
-        border-radius: 100px;
-        background-color: #4b4b4b;
-        display: block;
-        margin-bottom: 80px;
-    }
-    .bd-portfolio-navigator a.bd-item-active {
-        background-color: #98aafa;
+        display: none;
     }
 
     .bd-controls {
-        width: 150px;
+        width: 100%;
         height: 45px;
-        background-color: #282828;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-
+        margin-bottom: 60px;
     }
 
     .bd-current-item-indicator {
@@ -312,6 +302,30 @@ a:hover {
     .bd-portfolio-slider-info video {
         width: 100%;
         border-radius: 12px;
+    }
+
+    .bd-slider-item .bd-full-height {
+        height: auto;
+    }
+
+    .bd-portfolio-sidebar-main {
+        align-self: start;
+        order: 2;
+    }
+    .bd-slider-container-main {
+        order: 1;
+    }
+
+    .bd-portfolio-slider-info-main {
+        display: flex;
+        align-self: start;
+        order: 2;
+    }
+    .bd-portfolio-slider-thumb-box-main {
+        display: flex;
+        order: 1;
+        margin-top: 80px;
+        margin-bottom: 20px;
     }
 
 
@@ -382,6 +396,96 @@ a:hover {
         transition: all 0.2s ease-in-out;
         -webkit-box-shadow: 0px 0px 5px 5px rgb(0 0 0 / 20%);
         box-shadow: 0px 0px 5px 5px rgb(0 0 0 / 20%);
+    }
+
+    /************************ Portfolio Single Work Page ************************/
+
+    .bd-slideshow-main {
+        position: relative;
+        padding-bottom: 80px;
+    }
+
+    .bd-slideshow-nav-items {
+        padding-top: 30px;
+    }
+
+    .bd-slideshow-nav-items button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .bd-slideshow-item-active button {
+        cursor: default;
+    }
+
+    .bd-slideshow-nav-items button h4 {
+        transition: all 0.2s ease-in-out;
+    }
+    .bd-slideshow-nav-items button h4:hover {
+        color: #4467ff;
+        transition: all 0.2s ease-in-out;
+    }
+    .bd-slideshow-item-active button h4:hover {
+        color: #98aafa;
+    }
+
+    .bd-slideshow-nav-items button h4:before {
+        content: '';
+        float: left;
+        width: 0;
+        height: 4px;
+        background-color: #98aafa;
+        border-radius: 10px;
+        margin-top: 12px;
+        margin-right: 10px;
+        transition: all 0.2s ease-in-out;
+    }
+    .bd-slideshow-nav-items button h4:hover:before {
+        width: 10px;
+        background-color: #4467ff;
+        transition: all 0.2s ease-in-out;
+    }
+    .bd-slideshow-item-active button h4:before {
+        content: '';
+        float: left;
+        width: 10px;
+        height: 4px;
+        background-color: #98aafa;
+        border-radius: 10px;
+        margin-top: 12px;
+        margin-right: 10px;
+        transition: all 0.2s ease-in-out;
+    }
+    .bd-slideshow-item-active button h4:hover:before {
+        background-color: #98aafa;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .bd-slideshow-nav-items p {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+    }
+    .bd-slideshow-item-active p {
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .bd-slideshow-works-main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .bd-slideshow-works {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        transition: all 0.2s ease-in-out;
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    .bd-slideshow-works-active {
+        transition: all 0.5s ease-in-out;
+        transform: translateX(0);
+        opacity: 1;
     }
 
 
@@ -469,15 +573,77 @@ a:hover {
     
 }
 
-@media screen and (min-width: 576px) {
-    
-}
-
 @media screen and (min-width: 768px) {
+
+    /************************ Hero ************************/
+    #bd-hero {
+        background-image: url(../images/img-bernardo.png);
+        background-position: 95% bottom;
+    }
+
+    /************************ Portfolio Home Sidebar ************************/
+    .bd-slider-item .bd-full-height {
+        padding: 20px 20px;
+        height: 100vh;
+    }
+
+    .bd-portfolio-sidebar-main {
+        align-self: auto;
+        order: 1;
+    }
+    .bd-slider-container-main {
+        order: 2;
+    }
+
+    .bd-portfolio-slider-info-main {
+        display: flex;
+        align-self: start;
+        order: 2;
+    }
+    .bd-portfolio-slider-thumb-box-main {
+        display: flex;
+        order: 1;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    .bd-portfolio-counter {
+        width: 100%;
+        display: block;
+        padding-bottom: 40px;
+    }
+
+    .bd-portfolio-navigator {
+        width: 100%;
+        display: table;
+    }
+    .bd-portfolio-navigator a {
+        width: 20px;
+        height: 4px;
+        border-radius: 100px;
+        background-color: #4b4b4b;
+        display: block;
+        margin-bottom: 80px;
+    }
+    .bd-portfolio-navigator a.bd-item-active {
+        background-color: #98aafa;
+    }
+
+    .bd-controls {
+        width: 150px;
+        height: 45px;
+        background-color: #282828;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        margin-bottom: 0;
+    }
     
 }
 
 @media screen and (min-width: 992px) {
+
     .bd-nav {
         display: flex;
         float: left;
@@ -508,9 +674,36 @@ a:hover {
         padding: 130px 0;
         position: relative;
     }
+
+    /************************ Portfolio Home Sidebar ************************/
+    .bd-slider-item .bd-full-height {
+        padding: 0 20px;
+    }
+    .bd-portfolio-slider-info-main {
+        display: flex;
+        align-self: auto;
+        order: 1;
+    }
+    .bd-portfolio-slider-thumb-box-main {
+        display: flex;
+        margin-bottom: 40px;
+        order: 2;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
+
+    /************************ Hero ************************/
+    #bd-hero {
+        background-position: 80% bottom;
+        background-size: auto 90%;
+    }
+
+    /************************ Portfolio Home Sidebar ************************/
+    .bd-slider-item .bd-full-height {
+        padding: 0;
+    }
     
 }
 
@@ -535,11 +728,17 @@ a:hover {
 .bd-pad-top-0 {
     padding-top: 0;
 }
+.bd-pad-top-10 {
+    padding-top: 10px;
+}
 .bd-pad-top-15 {
     padding-top: 15px;
 }
 .bd-pad-top-30 {
     padding-top: 30px;
+}
+.bd-pad-top-40 {
+    padding-top: 40px;
 }
 .bd-pad-top-60 {
     padding-top: 60px;
@@ -768,6 +967,7 @@ a:hover {
 .bd-btn-prev img, .bd-btn-next img {
     width: 15px;
     height: 15px;
+    margin: 0 auto;
 }
 .bd-btn-next img {
     transform: rotate(180deg);
@@ -855,4 +1055,49 @@ a:hover {
     color: #98aafa;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 576px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .bd-portfolio-slider-info h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .bd-portfolio-slider-info p {
+        text-align: center;
+    }
+    .btn-primary {
+        margin: 0 auto;
+    }
+    .bd-controls {
+        margin-top: 40px;
+    }
+
+    .bd-btn-prev, .bd-btn-next {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color: #282828;
+        padding: 0;
+        flex-basis: auto;
+    }
+    .bd-btn-prev {
+        margin-right: 20px;
+    }
+    .bd-btn-next {
+        margin-left: 20px;
+    }
+    .bd-btn-prev img, .bd-btn-next img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .bd-current-item-indicator {
+        font-size: 22px;
+    }
+
 }

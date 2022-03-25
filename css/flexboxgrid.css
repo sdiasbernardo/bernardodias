@@ -353,6 +353,7 @@
   .col-sm-12 {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    /*flex-basis: auto;*/
     max-width: 100%;
   }
 
