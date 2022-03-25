@@ -46,7 +46,7 @@ let headerScrollDown = {
         handler: function() {
         this.element.classList.toggle('sticky');
     },
-    offset: -25
+    offset: -15
 })};
 
 let myScrollDown = {
